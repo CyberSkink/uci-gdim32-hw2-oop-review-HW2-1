@@ -474,6 +474,10 @@ PrefabInstance:
       propertyPath: _wait
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7897429685883448357, guid: ffe363edb410e024581ff4457ad57695, type: 3}
+      propertyPath: _randomTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

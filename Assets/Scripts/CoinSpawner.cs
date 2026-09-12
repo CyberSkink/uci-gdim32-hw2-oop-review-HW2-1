@@ -3,7 +3,7 @@ using UnityEngine;
 public class CoinSpawner : MonoBehaviour
 {
    [SerializeField] public float _randomTime = 1f;
-   [SerializeField] public float _wait = 1f;
+   [SerializeField] public float _wait = 0.1f;
    [SerializeField] public GameObject _coinPrefab;
     private Transform _spawnerTransform;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
