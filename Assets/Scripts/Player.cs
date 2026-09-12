@@ -2,9 +2,12 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
+using System.Numerics;
 
 public class Player : MonoBehaviour
 {
+    public InputAction _playerInput;
     private Rigidbody2D _rb;
 
     private float _jumpHeight = 5;
@@ -18,7 +21,8 @@ public class Player : MonoBehaviour
 
     private int _coinCount = 0;
 
-    
+    private float _playerDirection;
+    [SerializeField] public float _speed = 1f;
     private Collider2D _iceCollider;
     public bool _touchingGround;
 
@@ -26,6 +30,7 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        _playerInput = InputSystem.actions.FindAction("Move");
         _rb = GetComponent<Rigidbody2D>();
         _iceCollider = _ice.GetComponent<BoxCollider2D>();
 
@@ -58,9 +63,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_playerInput.IsPressed())
+        {
+            _rb.linearVelocity = new UnityEngine.Vector2(_playerInput.ReadValue<UnityEngine.Vector2>().x * _speed,_rb.linearVelocity.y);
+        }
         if(Input.GetKey(KeyCode.Space) && _touchingGround)
         {
-          _rb.linearVelocity = new Vector2(_rb.linearVelocity.x,_jumpHeight);
+          _rb.linearVelocity = new UnityEngine.Vector2(_rb.linearVelocity.x,_jumpHeight);
         }
 
     }

@@ -831,6 +831,18 @@ PrefabInstance:
       propertyPath: _ice
       value: 
       objectReference: {fileID: 532861498}
+    - target: {fileID: 7026875549840902391, guid: 28547184de41a164f90cd63225e098d9, type: 3}
+      propertyPath: _moveRight.m_Name
+      value: Move Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026875549840902391, guid: 28547184de41a164f90cd63225e098d9, type: 3}
+      propertyPath: _moveAction.m_Name
+      value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 7026875549840902391, guid: 28547184de41a164f90cd63225e098d9, type: 3}
+      propertyPath: _playerInput.m_Name
+      value: Player Input
+      objectReference: {fileID: 0}
     - target: {fileID: 7423756093408451704, guid: 28547184de41a164f90cd63225e098d9, type: 3}
       propertyPath: m_Name
       value: Pengin
